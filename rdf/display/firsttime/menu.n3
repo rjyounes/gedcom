@@ -74,7 +74,7 @@ display:Families
 
 display:Events
     a display:Page ;    
-    a display:ClassGroupPage;
+    a display:ClassGroupPage ;
     display:forClassGroup demo:vitroClassGroupEvents ;
     display:title "Events" ;
     display:urlMapping "/events" ;
@@ -88,17 +88,21 @@ display:homeDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.BrowseDataGetter> .
       
 display:peopleDataGetter
-      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
-      display:forClassGroup
-              demo:vitroClassGroupPeople .
+      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData> ;
+      display:forClassGroup demo:vitroClassGroupPeople .
 
 display:familiesDataGetter
-      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
-      display:forClassGroup
-              demo:vitroClassGroupFamilies .
-
+      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData> ;
+      display:forClassGroup demo:vitroClassGroupFamilies .
+              
 display:eventsDataGetter
-      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
-      display:forClassGroup
-              demo:vitroClassGroupEvents .
+      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData> ;
+      # Trying to configure the page to hide event superclasses, but not working.
+      # a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.IndividualsForClassesDataGetter> ;
+      # display:getIndividualsForClass 
+      #     gedcom:Birth, gedcom:Death, gedcom:Marriage, gedcom:Divorce ;
+      # display:restrictResultsByInternalClass "false" ;
+      display:forClassGroup demo:vitroClassGroupEvents .
+
+              
 
