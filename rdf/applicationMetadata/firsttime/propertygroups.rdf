@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns="http://www.daml.org/2001/01/gedcom/gedcom#"
+    xml:base="http://www.daml.org/2001/01/gedcom/gedcom"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:gedcom2="http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#"
+    xmlns:gedcom="http://www.daml.org/2001/01/gedcom/gedcom#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  
+  <rdf:Description rdf:about="http://vivoweb.org/ontology#vitroPropertyGroupPersonalData">
+    <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-07T14:00:00</vitro:modTime>
+    <rdfs:label xml:lang="en-US">personal data</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data about a single person, such as name, birth, death (datatype properties and person to event)</vitro:publicDescriptionAnnot>
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</vitro:displayRank>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://vivoweb.org/ontology#vitroPropertyGroupFamilyRelationships">
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</vitro:displayRank>
+    <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-07T14:00:00</vitro:modTime>
+    <rdfs:label xml:lang="en-US">family relationshops</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relationships between two persons (person to person)</vitro:publicDescriptionAnnot>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://vivoweb.org/ontology#vitroPropertyGroupFamilyRoles">
+    <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-07T14:00:00</vitro:modTime>
+    <rdfs:label xml:lang="en-US">family roles</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a person's role within a family (person to family)</vitro:publicDescriptionAnnot>
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</vitro:displayRank>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://vivoweb.org/ontology#vitroPropertyGroupFamilyMembers">
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</vitro:displayRank>
+    <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-07T14:00:00</vitro:modTime>
+    <rdfs:label xml:lang="en-US">family members</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a family member's role (family to person)</vitro:publicDescriptionAnnot>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://vivoweb.org/ontology#vitroPropertyGroupFamilyEvents">
+    <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-07T14:00:00</vitro:modTime>
+    <rdfs:label xml:lang="en-US">personal data</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">events occurring in a family (family to event)</vitro:publicDescriptionAnnot>
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</vitro:displayRank>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://vivoweb.org/ontology#vitroPropertyGroupFamilyEventDetails">
+    <vitro:displayRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</vitro:displayRank>
+    <vitro:modTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-07T14:00:00</vitro:modTime>
+    <rdfs:label xml:lang="en-US">family relationshops</rdfs:label>
+    <rdf:type rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#PropertyGroup"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information about an event (datatype properties and event to person/family)</vitro:publicDescriptionAnnot>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+</rdf:RDF>

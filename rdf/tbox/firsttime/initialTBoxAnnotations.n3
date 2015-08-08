@@ -1,0 +1,208 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix gedcom:  <http://www.daml.org/2001/01/gedcom/gedcom#> .
+@prefix gedcom2: <http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#> .
+
+
+##### ONTOLOGY METADATA #####
+
+<http://www.daml.org/2001/01/gedcom/gedcom#> 
+    rdfs:label "Gedcom"@en-US ;  
+    vitro:ontologyPrefixAnnot "gedcom"^^xsd:string .
+    
+<http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#>
+    rdfs:label "Gedcom2"@en-US ;
+    vitro:ontologyPrefixAnnot "gedcom2"^^xsd:string .
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/public>
+    rdfs:label "Vitro Public Ontology"@en-US ;
+    vitro:ontologyPrefixAnnot "vitro-public"^^xsd:string .
+
+    
+##### CLASSES #####
+
+
+gedcom:Individual
+    rdfs:label "Person"@en-us ;
+    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupPeople> .
+    
+gedcom:Family
+    rdfs:label "Family"@en-us ;
+    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupFamilies> .
+    
+gedcom:Event
+    rdfs:label"Event"@en-us ;
+    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> . 
+        
+gedcom:FamilyEvent
+    rdfs:label "Family Event"@en-us ;
+    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
+    
+gedcom:IndividualEvent
+    rdfs:label "Individual Event"@en-us ;
+    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
+
+gedcom:Birth
+    rdfs:label "Birth"@en-us ;
+    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
+    
+gedcom:Death
+    rdfs:label "Death"@en-us ;
+    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
+    
+gedcom:Marriage
+    rdfs:label "Marriage"@en-us ;
+    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
+    
+gedcom:Divorce
+    rdfs:label "Divorce"@en-us ;
+    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
+
+
+##### OBJECT PROPERTIES #####
+
+gedcom2:birthOf
+    rdfs:label "birth of"@en-US;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupEventDetails> .
+
+gedcom2:deathOf
+    rdfs:label "death of"@en-US;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupEventDetails> .
+              
+gedcom2:divorceOf
+    rdfs:label "is divorce in family"@en-US;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupEventDetails> .
+              
+gedcom2:hasChild
+    rdfs:label "family has child"@en-US;
+    vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupFamilyMembers> .
+
+gedcom2:hasSpouse
+    rdfs:label "family has spouse"@en-US;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupFamilyMembers> .
+              
+gedcom2:isChildOf
+    rdfs:label "has parent"@en-US;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupFamilyRelationships> .
+              
+gedcom2:isParentOf
+    rdfs:label "has child"@en-US;
+    vitro:displayRankAnnot "2"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupFamilyRelationships> .
+
+gedcom2:isSpouseOf
+    rdfs:label "has spouse"@en-US;
+    vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupFamilyRelationships> .
+              
+gedcom2:marriageOf
+    rdfs:label "marriage created family"@en-US;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupEventDetails> .
+              
+gedcom2:birth
+    rdfs:label "birth"@en-US;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupPersonalData> .
+
+gedcom2:childIn
+    rdfs:label "is child in family"@en-US;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupFamilyRoles> .
+              
+gedcom2:death
+    rdfs:label "death"@en-US;
+    vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupPersonalData> .
+              
+gedcom2:divorce
+    rdfs:label "spouses' divorce"@en-US;
+    vitro:displayRankAnnot "1"^^xsd:int ;    
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupFamilyEvent> .
+
+gedcom2:eventProperty
+    rdfs:label "event property"@en-US .
+              
+gedcom2:familyEventProperty
+    rdfs:label "family event property"@en-US .
+              
+gedcom2:individualEventProperty
+    rdfs:label "individual event property"@en-US .
+
+gedcom2:marriage
+    rdfs:label "spouses' marriage"@en-US;
+    vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupFamilyEvents> .
+              
+gedcom2:spouseIn
+    rdfs:label "is spouse in family"@en-US;
+    vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupFamilyRoles> .
+
+
+##### DATATYPE PROPERTIES #####       
+      
+gedcom2:date
+    rdfs:label "date"@en-US;
+    vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupEventDetails> .
+
+gedcom2:givenName
+    rdfs:label "given name"@en-US;
+    vitro:displayRankAnnot "3"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupPersonalData> .
+              
+gedcom2:name
+    rdfs:label "name"@en-US;
+    vitro:displayRankAnnot "2"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupPersonalData> .
+              
+gedcom2:place
+    rdfs:label "place"@en-US;
+    vitro:displayRankAnnot "2"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupEventDetails> .
+
+gedcom2:sex
+    rdfs:label "sex"@en-US;
+    vitro:displayRankAnnot "5"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupPersonalData> .
+              
+gedcom2:surname
+    rdfs:label "surname"@en-US;
+    vitro:displayRankAnnot "4"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupPersonalData> .
+       
+gedcom2:title
+    rdfs:label "title"@en-US;
+    vitro:displayRankAnnot "6"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupPersonalData> .       

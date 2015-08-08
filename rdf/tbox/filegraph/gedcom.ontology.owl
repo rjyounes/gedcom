@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY gedcom "http://www.daml.org/2001/01/gedcom/gedcom#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY gedcom2 "http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.daml.org/2001/01/gedcom/gedcom#"
+     xml:base="http://www.daml.org/2001/01/gedcom/gedcom"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:gedcom2="http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#"
+     xmlns:gedcom="http://www.daml.org/2001/01/gedcom/gedcom#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.daml.org/2001/01/gedcom/gedcom">
+        <rdfs:comment>Genealogical Data Communication (GEDCOM) represented in DAML+OIL</rdfs:comment>
+        <owl:versionInfo>$Id: gedcom.daml,v 1.15 2002/09/06 15:38:18 mdean Exp $</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#birthOf -->
+
+    <owl:ObjectProperty rdf:about="&gedcom2;birthOf">
+        <rdfs:domain rdf:resource="&gedcom;Birth"/>
+        <rdfs:range rdf:resource="&gedcom;Individual"/>
+        <owl:inverseOf rdf:resource="&gedcom;birth"/>
+        <rdfs:subPropertyOf rdf:resource="&gedcom;individualEventProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#deathOf -->
+
+    <owl:ObjectProperty rdf:about="&gedcom2;deathOf">
+        <rdfs:domain rdf:resource="&gedcom;Death"/>
+        <rdfs:range rdf:resource="&gedcom;Individual"/>
+        <owl:inverseOf rdf:resource="&gedcom;death"/>
+        <rdfs:subPropertyOf rdf:resource="&gedcom;individualEventProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#divorceOf -->
+
+    <owl:ObjectProperty rdf:about="&gedcom2;divorceOf">
+        <rdfs:domain rdf:resource="&gedcom;Divorce"/>
+        <rdfs:range rdf:resource="&gedcom;Family"/>
+        <owl:inverseOf rdf:resource="&gedcom;divorce"/>
+        <rdfs:subPropertyOf rdf:resource="&gedcom;familyEventProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#hasChild -->
+
+    <owl:ObjectProperty rdf:about="&gedcom2;hasChild">
+        <rdfs:domain rdf:resource="&gedcom;Family"/>
+        <rdfs:range rdf:resource="&gedcom;Individual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#hasSpouse -->
+
+    <owl:ObjectProperty rdf:about="&gedcom2;hasSpouse">
+        <rdfs:domain rdf:resource="&gedcom;Family"/>
+        <rdfs:range rdf:resource="&gedcom;Individual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#isChildOf -->
+
+    <owl:ObjectProperty rdf:about="&gedcom2;isChildOf">
+        <rdfs:range rdf:resource="&gedcom;Individual"/>
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#isParentOf -->
+
+    <owl:ObjectProperty rdf:about="&gedcom2;isParentOf">
+        <owl:inverseOf rdf:resource="&gedcom2;isChildOf"/>
+        <rdfs:range rdf:resource="&gedcom;Individual"/>
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#isSpouseOf -->
+
+    <owl:ObjectProperty rdf:about="&gedcom2;isSpouseOf">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:range rdf:resource="&gedcom;Individual"/>
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#marriageOf -->
+
+    <owl:ObjectProperty rdf:about="&gedcom2;marriageOf">
+        <rdfs:range rdf:resource="&gedcom;Family"/>
+        <rdfs:domain rdf:resource="&gedcom;Marriage"/>
+        <rdfs:subPropertyOf rdf:resource="&gedcom;familyEventProperty"/>
+        <owl:inverseOf rdf:resource="&gedcom;marriage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#birth -->
+
+    <owl:ObjectProperty rdf:about="&gedcom;birth">
+        <rdfs:range rdf:resource="&gedcom;Birth"/>
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+        <rdfs:subPropertyOf rdf:resource="&gedcom;individualEventProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#childIn -->
+
+    <owl:ObjectProperty rdf:about="&gedcom;childIn">
+        <rdfs:range rdf:resource="&gedcom;Family"/>
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#death -->
+
+    <owl:ObjectProperty rdf:about="&gedcom;death">
+        <rdfs:range rdf:resource="&gedcom;Death"/>
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+        <rdfs:subPropertyOf rdf:resource="&gedcom;individualEventProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#divorce -->
+
+    <owl:ObjectProperty rdf:about="&gedcom;divorce">
+        <rdfs:range rdf:resource="&gedcom;Divorce"/>
+        <rdfs:domain rdf:resource="&gedcom;Family"/>
+        <rdfs:subPropertyOf rdf:resource="&gedcom;familyEventProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#eventProperty -->
+
+    <owl:ObjectProperty rdf:about="&gedcom;eventProperty"/>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#familyEventProperty -->
+
+    <owl:ObjectProperty rdf:about="&gedcom;familyEventProperty">
+        <rdfs:subPropertyOf rdf:resource="&gedcom;eventProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#individualEventProperty -->
+
+    <owl:ObjectProperty rdf:about="&gedcom;individualEventProperty">
+        <rdfs:subPropertyOf rdf:resource="&gedcom;eventProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#marriage -->
+
+    <owl:ObjectProperty rdf:about="&gedcom;marriage">
+        <rdfs:domain rdf:resource="&gedcom;Family"/>
+        <rdfs:range rdf:resource="&gedcom;Marriage"/>
+        <rdfs:subPropertyOf rdf:resource="&gedcom;familyEventProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#spouseIn -->
+
+    <owl:ObjectProperty rdf:about="&gedcom;spouseIn">
+        <rdfs:range rdf:resource="&gedcom;Family"/>
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#date -->
+
+    <owl:DatatypeProperty rdf:about="&gedcom;date">
+        <rdfs:domain rdf:resource="&gedcom;Event"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#givenName -->
+
+    <owl:DatatypeProperty rdf:about="&gedcom;givenName">
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#name -->
+
+    <owl:DatatypeProperty rdf:about="&gedcom;name">
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#place -->
+
+    <owl:DatatypeProperty rdf:about="&gedcom;place">
+        <rdfs:domain rdf:resource="&gedcom;Event"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#sex -->
+
+    <owl:DatatypeProperty rdf:about="&gedcom;sex">
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#surname -->
+
+    <owl:DatatypeProperty rdf:about="&gedcom;surname">
+        <rdfs:domain rdf:resource="&gedcom;Individual"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#title -->
+
+    <owl:DatatypeProperty rdf:about="&gedcom;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#Birth -->
+
+    <owl:Class rdf:about="&gedcom;Birth">
+        <rdfs:subClassOf rdf:resource="&gedcom;IndividualEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#Death -->
+
+    <owl:Class rdf:about="&gedcom;Death">
+        <rdfs:subClassOf rdf:resource="&gedcom;IndividualEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#Divorce -->
+
+    <owl:Class rdf:about="&gedcom;Divorce">
+        <rdfs:subClassOf rdf:resource="&gedcom;FamilyEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#Event -->
+
+    <owl:Class rdf:about="&gedcom;Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;date"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;place"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;date"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;place"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#Family -->
+
+    <owl:Class rdf:about="&gedcom;Family">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;divorce"/>
+                <owl:allValuesFrom rdf:resource="&gedcom;Divorce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;marriage"/>
+                <owl:allValuesFrom rdf:resource="&gedcom;Marriage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>
+    A family named in a GEDCOM file.
+  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#FamilyEvent -->
+
+    <owl:Class rdf:about="&gedcom;FamilyEvent">
+        <rdfs:subClassOf rdf:resource="&gedcom;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#Individual -->
+
+    <owl:Class rdf:about="&gedcom;Individual">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;childIn"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;death"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;birth"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;childIn"/>
+                <owl:allValuesFrom rdf:resource="&gedcom;Family"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;surname"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;givenName"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;birth"/>
+                <owl:allValuesFrom rdf:resource="&gedcom;Birth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;givenName"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;death"/>
+                <owl:allValuesFrom rdf:resource="&gedcom;Death"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;sex"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;spouseIn"/>
+                <owl:allValuesFrom rdf:resource="&gedcom;Family"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;title"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;title"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;name"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;name"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;sex"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gedcom;surname"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#IndividualEvent -->
+
+    <owl:Class rdf:about="&gedcom;IndividualEvent">
+        <rdfs:subClassOf rdf:resource="&gedcom;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.daml.org/2001/01/gedcom/gedcom#Marriage -->
+
+    <owl:Class rdf:about="&gedcom;Marriage">
+        <rdfs:subClassOf rdf:resource="&gedcom;FamilyEvent"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
