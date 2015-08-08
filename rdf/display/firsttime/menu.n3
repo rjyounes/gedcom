@@ -97,7 +97,12 @@ display:familiesDataGetter
               
 display:eventsDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData> ;
+      # Trying to configure the page to hide event superclasses, but not working.
+      # a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.IndividualsForClassesDataGetter> ;
+      # display:getIndividualsForClass 
+      #     gedcom:Birth, gedcom:Death, gedcom:Marriage, gedcom:Divorce ;
+      # display:restrictResultsByInternalClass "false" ;
       display:forClassGroup demo:vitroClassGroupEvents .
 
-
+              
 
