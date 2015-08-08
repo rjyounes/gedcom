@@ -4,9 +4,9 @@
 @prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ld4l: <http://ld4l.org/ontology#> .
+@prefix demo: <http://demo.mannlib.cornell.edu/gedcom/demo#> .
 
-### This file defines the default menu for ld4l-vitro. ###
+### This file defines the default menu for demo-vitro. ###
 ### It overrides the menu.n3 from vitro.
 
 #### Default Menu ####
@@ -14,7 +14,7 @@
 display:DefaultMenu 
     a  display:MainMenu ;
     rdfs:label "Default Menu" ;
-        display:hasElement display:HomeMenuItem ;
+    display:hasElement display:HomeMenuItem ;
     display:hasElement display:PeopleMenuItem ;
     display:hasElement display:FamiliesMenuItem ;
     display:hasElement display:EventsMenuItem .   
@@ -59,7 +59,7 @@ display:Home
 display:People 
     a display:Page ;    
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupPeople ;
+    display:forClassGroup demo:vitroClassGroupPeople ;
     display:title "People" ;
     display:urlMapping "/people" ;
     display:hasDataGetter display:peopleDataGetter .
@@ -67,7 +67,7 @@ display:People
 display:Families
     a display:Page ;    
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupFamilies ;
+    display:forClassGroup demo:vitroClassGroupFamilies ;
     display:title "Families" ;
     display:urlMapping "/families" ;
     display:hasDataGetter display:familiesDataGetter .
@@ -75,7 +75,7 @@ display:Families
 display:Events
     a display:Page ;    
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupEvents ;
+    display:forClassGroup demo:vitroClassGroupEvents ;
     display:title "Events" ;
     display:urlMapping "/events" ;
     display:hasDataGetter display:eventsDataGetter .
@@ -90,15 +90,15 @@ display:homeDataGetter
 display:peopleDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupPeople .
+              demo:vitroClassGroupPeople .
 
 display:familiesDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupFamilies .
+              demo:vitroClassGroupFamilies .
 
 display:eventsDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupEvents .
+              demo:vitroClassGroupEvents .
 
