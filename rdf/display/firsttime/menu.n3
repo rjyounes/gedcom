@@ -16,11 +16,8 @@ display:DefaultMenu
     rdfs:label "Default Menu" ;
         display:hasElement display:HomeMenuItem ;
     display:hasElement display:PeopleMenuItem ;
-    display:hasElement display:WorksMenuItem ;
-    display:hasElement display:InstancesMenuItem ;
-    display:hasElement display:TopicsMenuItem ;
-    display:hasElement display:OrganizationsMenuItem ; 
-    display:hasElement display:AuthoritiesMenuItem .    
+    display:hasElement display:FamiliesMenuItem ;
+    display:hasElement display:EventsMenuItem .   
      
 #### Menu Items for Default Menu ####
 
@@ -36,36 +33,17 @@ display:PeopleMenuItem
     display:linkText "People";
     display:toPage display:People .
 
-display:WorksMenuItem     
+display:FamiliesMenuItem     
     a display:NavigationElement ;
     display:menuPosition 3;
-    display:linkText "Works";
-    display:toPage display:Works .
+    display:linkText "Families";
+    display:toPage display:Families .
     
-display:InstancesMenuItem 
+display:EventsMenuItem 
     a display:NavigationElement ;
     display:menuPosition 4;
-    display:linkText "Instances";
-    display:toPage display:Instances .   
-
-display:TopicsMenuItem 
-    a display:NavigationElement ;
-    display:menuPosition 5;
-    display:linkText "Topics";
-    display:toPage display:Topics .   
-
-display:OrganizationsMenuItem 
-    a display:NavigationElement ;
-    display:menuPosition 6;
-    display:linkText "Organizations";
-    display:toPage display:Organizations .
-        
-display:AuthoritiesMenuItem 
-    a display:NavigationElement ;
-    display:menuPosition 7;
-    display:linkText "Authorities";
-    display:toPage display:Authorities .
-    
+    display:linkText "Events";
+    display:toPage display:Events .   
 
 
 # Display pages #
@@ -86,45 +64,23 @@ display:People
     display:urlMapping "/people" ;
     display:hasDataGetter display:peopleDataGetter .
     
-display:Works
+display:Families
     a display:Page ;    
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupWorks ;
-    display:title "Works" ;
-    display:urlMapping "/works" ;
-    display:hasDataGetter display:worksDataGetter .
+    display:forClassGroup ld4l:vitroClassGroupFamilies ;
+    display:title "Families" ;
+    display:urlMapping "/families" ;
+    display:hasDataGetter display:familiesDataGetter .
 
-display:Instances
+display:Events
     a display:Page ;    
     a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupInstances ;
-    display:title "Instances" ;
-    display:urlMapping "/instances" ;
-    display:hasDataGetter display:instancesDataGetter .
+    display:forClassGroup ld4l:vitroClassGroupEvents ;
+    display:title "Events" ;
+    display:urlMapping "/events" ;
+    display:hasDataGetter display:eventsDataGetter .
 
-display:Topics
-    a display:Page ;        
-    a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupTopics ;
-    display:title "Topics" ;
-    display:urlMapping "/topics" ;
-    display:hasDataGetter display:topicsDataGetter .
-    
-display:Organizations
-    a display:Page ;        
-    a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupOrganizations ;
-    display:title "Organizations" ;
-    display:urlMapping "/organizations" ;
-    display:hasDataGetter display:organizationsDataGetter .
 
-display:Authorities
-    a display:Page ;        
-    a display:ClassGroupPage;
-    display:forClassGroup ld4l:vitroClassGroupAuthorities ;
-    display:title "Authorities" ;
-    display:urlMapping "/authorities" ;
-    display:hasDataGetter display:authoritiesDataGetter .
     
 # The data getter objects used above #
 
@@ -136,27 +92,13 @@ display:peopleDataGetter
       display:forClassGroup
               ld4l:vitroClassGroupPeople .
 
-display:worksDataGetter
+display:familiesDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupWorks .
+              ld4l:vitroClassGroupFamilies .
 
-display:instancesDataGetter
+display:eventsDataGetter
       a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
       display:forClassGroup
-              ld4l:vitroClassGroupInstances .
+              ld4l:vitroClassGroupEvents .
 
-display:topicsDataGetter
-      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
-      display:forClassGroup
-              ld4l:vitroClassGroupTopics .
-                            
-display:organizationsDataGetter
-      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
-      display:forClassGroup
-              ld4l:vitroClassGroupOrganizations .
-                            
-display:authoritiesDataGetter
-      a <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.ClassGroupPageData>;
-      display:forClassGroup
-              ld4l:vitroClassGroupAuthorities .
