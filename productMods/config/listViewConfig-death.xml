@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+
+<list-view-config>
+    <query-select>    
+        PREFIX gedcom: &lt;http://www.daml.org/2001/01/gedcom/gedcom#&gt;
+        
+        SELECT DISTINCT ?death
+                        ?date 
+                        ?place
+        WHERE {
+            ?subject gedcom:death ?death .
+            OPTIONAL { ?death gedcom:date ?date . }
+            OPTIONAL { ?death gedcom:place ?place . }
+        } 
+    </query-select>
+       
+    <query-construct>
+        PREFIX gedcom: &lt;http://www.daml.org/2001/01/gedcom/gedcom#&gt;
+        CONSTRUCT { 
+            ?subject gedcom:death ?death .
+            ?death gedcom:date ?date .
+            ?death gedcom:place ?place .
+        } WHERE {
+            ?subject gedcom:death ?death .
+            ?death gedcom:date ?date .
+            ?death gedcom:place ?place .
+        } 
+    </query-construct>
+              
+    <template>propStatement-death.ftl</template>
+</list-view-config>
