@@ -3,7 +3,6 @@
      is also used to generate the property statement during a deletion.  
  -->
  
-<#import "lib-sequence.ftl" as s>
 <@showBirth statement />
 
 <#-- Use a macro to keep variable assignments local; otherwise the values carry over to the
@@ -21,3 +20,4 @@
     </#if>
          
 </#macro>
+
