@@ -26,38 +26,73 @@
 
 gedcom:Individual
     rdfs:label "Person"@en-us ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupPeople> .
     
 gedcom:Family
     rdfs:label "Family"@en-us ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupFamilies> .
     
 gedcom:Event
-    rdfs:label"Event"@en-us ;
-    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> . 
+    rdfs:label"Event"@en-us .
         
 gedcom:FamilyEvent
-    rdfs:label "Family Event"@en-us ;
-    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
+    rdfs:label "Family Event"@en-us .
     
 gedcom:IndividualEvent
-    rdfs:label "Individual Event"@en-us ;
-    vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
+    rdfs:label "Individual Event"@en-us .
 
 gedcom:Birth
     rdfs:label "Birth"@en-us ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    #vitro:customEntryFormAnnot
+        #"edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddBirthToPersonGenerator"^^xsd:string ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
     
 gedcom:Death
     rdfs:label "Death"@en-us ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
     
 gedcom:Marriage
     rdfs:label "Marriage"@en-us ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
     
 gedcom:Divorce
     rdfs:label "Divorce"@en-us ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
 
 
@@ -66,99 +101,207 @@ gedcom:Divorce
 gedcom2:birthOf
     rdfs:label "birth of"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupEventDetails> .
 
 gedcom2:deathOf
     rdfs:label "death of"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupEventDetails> .
               
 gedcom2:divorceOf
     rdfs:label "is divorce in family"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupEventDetails> .
               
 gedcom2:hasChild
     rdfs:label "family has child"@en-US;
     vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyMembers> .
 
 gedcom2:hasSpouse
     rdfs:label "family has spouse"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyMembers> .
               
 gedcom2:isChildOf
     rdfs:label "has parent"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyRelationships> .
               
 gedcom2:isParentOf
     rdfs:label "has child"@en-US;
     vitro:displayRankAnnot "2"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyRelationships> .
 
 gedcom2:isSpouseOf
     rdfs:label "has spouse"@en-US;
     vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyRelationships> .
               
 gedcom2:marriageOf
     rdfs:label "marriage started family"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupEventDetails> .
               
 gedcom:birth
     rdfs:label "birth"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupPersonalData> .
 
 gedcom:childIn
     rdfs:label "is child in family"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyRoles> .
               
 gedcom:death
     rdfs:label "death"@en-US;
     vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupPersonalData> .
               
 gedcom:divorce
     rdfs:label "spouses' divorce"@en-US;
-    vitro:displayRankAnnot "1"^^xsd:int ;    
+    vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;    
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyEvents> .
 
 gedcom:eventProperty
-    rdfs:label "event property"@en-US .
+    rdfs:label "event property"@en-US ; 
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> .    
               
 gedcom:familyEventProperty
     rdfs:label "family event property"@en-US .
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> . 
               
 gedcom:individualEventProperty
     rdfs:label "individual event property"@en-US .
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> . 
 
 gedcom:marriage
     rdfs:label "spouses' marriage"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyEvents> .
               
 gedcom:spouseIn
     rdfs:label "is spouse in family"@en-US;
     vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyRoles> .
 
@@ -168,41 +311,83 @@ gedcom:spouseIn
 gedcom:date
     rdfs:label "date"@en-US;
     vitro:displayRankAnnot "1"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupEventDetails> .      
 
 gedcom:givenName
     rdfs:label "given name"@en-US;
     vitro:displayRankAnnot "3"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupPersonalData> .
               
 gedcom:name
     rdfs:label "name"@en-US;
     vitro:displayRankAnnot "2"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupPersonalData> .
 
 gedcom:place
     rdfs:label "place"@en-US;
     vitro:displayRankAnnot "2"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupEventDetails> .  
               
 gedcom:sex
     rdfs:label "sex"@en-US;
     vitro:displayRankAnnot "5"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupPersonalData> .
               
 gedcom:surname
     rdfs:label "surname"@en-US;
     vitro:displayRankAnnot "4"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupPersonalData> .
        
 gedcom:title
     rdfs:label "title"@en-US;
     vitro:displayRankAnnot "6"^^xsd:int ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
               <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupPersonalData> .       
