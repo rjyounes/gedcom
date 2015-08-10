@@ -16,11 +16,15 @@
             ?subject a gedcom:Family .
             ?marriage a gedcom:Marriage .
             OPTIONAL { ?spouse1 gedcom:spouseIn ?subject ;
-                                gedcom:sex "F"^^xsd:string ;
-                                gedcom:name ?spouse1name . }
+                                gedcom:name ?spouse1name ;
+                                # gedcom:sex "F"^^xsd:string . }
+                                gedcom:sex ?sex1 .
+                                FILTER (STR(?sex1) = 'F') }
             OPTIONAL { ?spouse2 gedcom:spouseIn ?subject ;
-                                gedcom:sex "M"^^xsd:string ;
-                                gedcom:name ?spouse2name . }
+                                gedcom:name ?spouse2name ;
+                                # gedcom:sex "M"^^xsd:string . }
+                                gedcom:sex ?sex2 .                               
+                                FILTER (STR(?sex2) = 'M') }
             OPTIONAL { ?marriage gedcom:date ?date . }
             OPTIONAL { ?marriage gedcom:place ?place . }
 
@@ -39,16 +43,26 @@
             ?marriage gedcom:date ?date .
             ?marriage gedcom:place ?place .
         } WHERE {
-            ?subject ?property ?marriage .            
-            ?subject a gedcom:Family .
-            ?marriage a gedcom:Marriage .
-            ?spouse gedcom:spouseIn ?subject .
-            ?spouse gedcom:name ?name .
-            ?spouse gedcom:sex ?sex .
-            ?marriage gedcom:date ?date .
-            ?marriage gedcom:place ?place .
+            { ?subject ?property ?marriage .            
+              ?subject a gedcom:Family .
+              ?marriage a gedcom:Marriage .
+              ?spouse gedcom:spouseIn ?subject .
+              ?spouse gedcom:name ?name .
+              ?spouse gedcom:sex ?sex .
+            } UNION {
+              ?subject ?property ?marriage .            
+              ?subject a gedcom:Family .
+              ?marriage a gedcom:Marriage .
+              ?marriage gedcom:date ?date .
+            } UNION {
+              ?subject ?property ?marriage .            
+              ?subject a gedcom:Family .
+              ?marriage a gedcom:Marriage .
+              ?marriage gedcom:place ?place .
+            }
         } 
     </query-construct>
+
               
     <template>propStatement-marriage.ftl</template>
 </list-view-config>
