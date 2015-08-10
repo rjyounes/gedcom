@@ -1,36 +1,54 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
 
-<!-- See guidelines in vitro/doc/list_view_configuration_guidelines.txt -->
-
 <list-view-config>
     <query-select>    
-        PREFIX vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt;
+        PREFIX gedcom: &lt;http://www.daml.org/2001/01/gedcom/gedcom#&gt;
+        PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
         
-        SELECT DISTINCT ?vcard 
-                        ?email
-                        ?emailAddress
+        SELECT DISTINCT ?marriage
+                        ?spouse1name
+                        ?spouse2name
+                        ?date
+                        ?place
         WHERE {
-            ?subject ?property ?vcard .
-            ?vcard vcard:hasEmail ?email .
-            ?email vcard:email ?emailAddress 
-            MINUS {?email a vcard:Work}
+            ?subject ?property ?marriage .
+            ?subject a gedcom:Family .
+            ?marriage a gedcom:Marriage .
+            OPTIONAL { ?spouse1 gedcom:spouseIn ?subject ;
+                                gedcom:sex "F"^^xsd:string ;
+                                gedcom:name ?spouse1name . }
+            OPTIONAL { ?spouse2 gedcom:spouseIn ?subject ;
+                                gedcom:sex "M"^^xsd:string ;
+                                gedcom:name ?spouse2name . }
+            OPTIONAL { ?marriage gedcom:date ?date . }
+            OPTIONAL { ?marriage gedcom:place ?place . }
+
         } 
     </query-select>
        
     <query-construct>
-        PREFIX vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt;
+        PREFIX gedcom: &lt;http://www.daml.org/2001/01/gedcom/gedcom#&gt;
         CONSTRUCT { 
-            ?subject ?property ?vcard .
-            ?vcard vcard:hasEmail ?email .
-            ?email ?emailProperty ?emailValue 
+            ?subject ?property ?marriage .
+            ?subject a gedcom:Family .
+            ?marriage a gedcom:Marriage .
+            ?spouse gedcom:spouseIn ?subject .
+            ?spouse gedcom:name ?name .
+            ?spouse gedcom:sex ?sex .
+            ?marriage gedcom:date ?date .
+            ?marriage gedcom:place ?place .
         } WHERE {
-               ?subject ?property ?vcard .
-               ?vcard vcard:hasEmail ?email .
-               ?email ?emailProperty ?emailValue 
+            ?subject ?property ?marriage .            
+            ?subject a gedcom:Family .
+            ?marriage a gedcom:Marriage .
+            ?spouse gedcom:spouseIn ?subject .
+            ?spouse gedcom:name ?name .
+            ?spouse gedcom:sex ?sex .
+            ?marriage gedcom:date ?date .
+            ?marriage gedcom:place ?place .
         } 
     </query-construct>
               
-    <template>propStatement-emailAddress.ftl</template>
-    <postprocessor>edu.cornell.mannlib.vitro.webapp.web.templatemodels.individual.MaintainDuplicatesObjectPropertyDataPostProcessor</postprocessor>
+    <template>propStatement-marriage.ftl</template>
 </list-view-config>

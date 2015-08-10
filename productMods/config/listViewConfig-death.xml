@@ -10,7 +10,7 @@
                         ?date 
                         ?place
         WHERE {
-            ?subject gedcom:death ?death .
+            ?subject ?property ?death .
             OPTIONAL { ?death gedcom:date ?date . }
             OPTIONAL { ?death gedcom:place ?place . }
         } 
@@ -19,11 +19,11 @@
     <query-construct>
         PREFIX gedcom: &lt;http://www.daml.org/2001/01/gedcom/gedcom#&gt;
         CONSTRUCT { 
-            ?subject gedcom:death ?death .
+            ?subject ?property ?death .
             ?death gedcom:date ?date .
             ?death gedcom:place ?place .
         } WHERE {
-            ?subject gedcom:death ?death .
+            ?subject ?property ?death .
             ?death gedcom:date ?date .
             ?death gedcom:place ?place .
         } 
