@@ -23,9 +23,12 @@
             ?birth gedcom:date ?date .
             ?birth gedcom:place ?place .
         } WHERE {
-            ?subject ?property ?birth .
-            ?birth gedcom:date ?date .
-            ?birth gedcom:place ?place .
+            { ?subject ?property ?birth .
+              ?birth gedcom:date ?date .
+            } UNION {
+              ?subject ?property ?birth .
+              ?birth gedcom:place ?place . 
+            }
         } 
     </query-construct>
 
