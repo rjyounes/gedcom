@@ -139,7 +139,7 @@ gedcom:divorce
     rdfs:label "spouses' divorce"@en-US;
     vitro:displayRankAnnot "1"^^xsd:int ;    
     vitro:inPropertyGroupAnnot
-              <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyEvent> .
+              <http://demo.mannlib.cornell.edu/gedcom/demo#vitroPropertyGroupFamilyEvents> .
 
 gedcom:eventProperty
     rdfs:label "event property"@en-US .
