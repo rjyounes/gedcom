@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:gedcom="http://www.daml.org/2001/01/gedcom/gedcom#"
+    xmlns:gedcom2="http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#">
+ 
+    <!--
+    Not needed. It's automatically loaded with vitro.
+    <owl:Ontology rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/public#"/>
+    -->
+    <owl:Ontology rdf:about="http://www.daml.org/2001/01/gedcom/gedcom#"/>
+    <owl:Ontology rdf:about="http://demo.mannlib.cornell.edu/2015/01/gedcom/gedcom#"/> 
+</rdf:RDF>
