@@ -25,23 +25,23 @@
 </#if>
 
 <#if editMode == "edit">    
-        <#assign titleVerb="${i18n().edit_capitalized}">        
-        <#assign submitButtonText="${i18n().save_changes}">
+        <#assign titleVerb="Edit">        
+        <#assign submitButtonText="Save changes">
         <#assign disabledVal="disabled">
 <#else>
-        <#assign titleVerb="${i18n().create_capitalized}">        
-        <#assign submitButtonText="${i18n().create_birth}">
+        <#assign titleVerb="Create">        
+        <#assign submitButtonText="Create">
         <#assign disabledVal=""/>
 </#if>
 
 <#assign requiredHint = "<span class='requiredHint'> *</span>" />
 
-<h2>${titleVerb}&nbsp;${i18n().birth} ${editConfiguration.subjectName}</h2>
+<h2>${titleVerb}&nbsp; birth of ${editConfiguration.subjectName}</h2>
 
 <#--Display error messages if any-->
 <#if submissionErrors?has_content>
     <section id="error-alert" role="alert">
-        <img src="${urls.images}/iconAlert.png" width="24" height="24" alert="${i18n().error_alert_icon}" />
+        <img src="${urls.images}/iconAlert.png" width="24" height="24" alert="error_alert_icon" />
         <p>
         </p>
     </section>
@@ -54,25 +54,25 @@
     <form id="addBirthToPerson" class="customForm noIE67" action="${submitUrl}"  role="add/edit birth">
 
         <p>
-            <label for="date">${i18n().date} 1 ${requiredHint}</label>
-            <input  size="40"  type="text" id="date" name="date" value="" />
+            <label for="date">date ${requiredHint}</label>
+            <input  size="40"  type="text" id="date" name="date" value="${date}" />
         </p>
     
         <p>
-            <label for="place">${i18n().place} 2</label>
-            <input  size="40"  type="text" id="place" name="place" value="" />
-            <input  type="hidden" id="place" name="place" value="${place}" />
+            <label for="place">place</label>
+            <input  size="40"  type="text" id="place" name="place" value="${place}" />
+            <#--<input  type="hidden" id="place" name="place" value="${place}" />-->
         </p>
 
 
         <input type="hidden" id="editKey" name="editKey" value="${editKey}"/>
 
         <p class="submit">
-            <input type="submit" id="submit" value="${submitButtonText}"/><span class="or"> ${i18n().or} </span>
-            <a class="cancel" href="${cancelUrl}" title="${i18n().cancel_title}">${i18n().cancel_link}</a>
+            <input type="submit" id="submit" value="${submitButtonText}"/><span class="or"> or </span>
+            <a class="cancel" href="${cancelUrl}" title="cancel">Cancel</a>
         </p>
 
-        <p id="requiredLegend" class="requiredHint">* ${i18n().required_fields}</p>
+        <p id="requiredLegend" class="requiredHint">* required fields}</p>
 
     </form>
 
