@@ -29,7 +29,7 @@ gedcom:Individual
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupPeople> .
@@ -39,7 +39,7 @@ gedcom:Family
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupFamilies> .
@@ -58,7 +58,7 @@ gedcom:Birth
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     #vitro:customEntryFormAnnot
@@ -70,7 +70,7 @@ gedcom:Death
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
@@ -80,7 +80,7 @@ gedcom:Marriage
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
@@ -90,7 +90,7 @@ gedcom:Divorce
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
@@ -104,7 +104,7 @@ gedcom2:birthOf
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -116,7 +116,7 @@ gedcom2:deathOf
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -128,7 +128,7 @@ gedcom2:divorceOf
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -140,7 +140,7 @@ gedcom2:hasChild
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -152,7 +152,7 @@ gedcom2:hasSpouse
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -164,7 +164,7 @@ gedcom2:isChildOf
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -176,7 +176,7 @@ gedcom2:isParentOf
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -188,7 +188,7 @@ gedcom2:isSpouseOf
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -200,7 +200,7 @@ gedcom2:marriageOf
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -212,7 +212,7 @@ gedcom:birth
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -224,7 +224,7 @@ gedcom:childIn
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -236,7 +236,7 @@ gedcom:death
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -248,7 +248,7 @@ gedcom:divorce
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;    
     vitro:inPropertyGroupAnnot
@@ -259,7 +259,7 @@ gedcom:eventProperty
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> .    
               
@@ -268,7 +268,7 @@ gedcom:familyEventProperty
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> . 
               
@@ -277,7 +277,7 @@ gedcom:individualEventProperty
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> . 
 
@@ -287,7 +287,7 @@ gedcom:marriage
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
@@ -299,7 +299,7 @@ gedcom:spouseIn
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
@@ -314,7 +314,7 @@ gedcom:date
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
@@ -326,7 +326,7 @@ gedcom:givenName
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
@@ -338,7 +338,7 @@ gedcom:name
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ; 
     vitro:inPropertyGroupAnnot
@@ -350,7 +350,7 @@ gedcom:place
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -362,7 +362,7 @@ gedcom:sex
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -374,7 +374,7 @@ gedcom:surname
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
@@ -386,7 +386,7 @@ gedcom:title
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
-          <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
+          <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
     vitro:inPropertyGroupAnnot
