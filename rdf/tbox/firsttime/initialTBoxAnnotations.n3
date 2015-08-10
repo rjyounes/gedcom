@@ -61,8 +61,6 @@ gedcom:Birth
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> ;
-    #vitro:customEntryFormAnnot
-        #"edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddBirthToPersonGenerator"^^xsd:string ;
     vitro:inClassGroup <http://demo.mannlib.cornell.edu/gedcom/demo#vitroClassGroupEvents> .
     
 gedcom:Death
@@ -209,6 +207,8 @@ gedcom2:marriageOf
 gedcom:birth
     rdfs:label "birth"@en-US;
     vitro:displayRankAnnot "0"^^xsd:int ;
+    vitro:customEntryFormAnnot
+         "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddBirthToPersonGenerator"^^xsd:string ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -264,7 +264,7 @@ gedcom:eventProperty
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> .    
               
 gedcom:familyEventProperty
-    rdfs:label "family event property"@en-US .
+    rdfs:label "family event property"@en-US ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -273,7 +273,7 @@ gedcom:familyEventProperty
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#editor> . 
               
 gedcom:individualEventProperty
-    rdfs:label "individual event property"@en-US .
+    rdfs:label "individual event property"@en-US ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot
           <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
     vitro:hiddenFromPublishBelowRoleLevelAnnot
