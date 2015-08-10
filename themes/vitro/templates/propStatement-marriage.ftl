@@ -8,6 +8,7 @@
      next statement -->
 <#macro showMarriage statement>
 
+    <#-- 
     <#if statement.spouse1name?has_content>
         ${statement.spouse1name} 
     </#if>
@@ -15,10 +16,26 @@
         ${statement.spouse2name} 
     </#if>
     <#if statement.date?has_content>
-        ${statement.date} 
+        on ${statement.date} 
     </#if>
     <#if statement.place?has_content>
-        ${statement.place} 
+        in ${statement.place} 
+    </#if>
+    -->  
+
+    <#if statement.spouse1name?has_content>
+        <#local spouse1name = statement.spouse1name>
+    </#if>
+    <#if statement.spouse2name?has_content>
+        <#local spouse2name = statement.spouse2name>
+    </#if>
+    <@s.join [ spouse1name!, spouse2name! ], "&nbsp;and&nbsp;" />
+    
+    <#if statement.date?has_content>
+        on ${statement.date} 
+    </#if>
+    <#if statement.place?has_content>
+        in ${statement.place} 
     </#if>  
-          
+             
 </#macro>
