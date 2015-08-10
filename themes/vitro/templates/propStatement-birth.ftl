@@ -2,7 +2,7 @@
      This template must be self-contained and not rely on other variables set for the individual page, because it
      is also used to generate the property statement during a deletion.  
  -->
- 
+<#import "lib-sequence.ftl" as s> 
 <@showBirth statement />
 
 <#-- Use a macro to keep variable assignments local; otherwise the values carry over to the
@@ -10,14 +10,27 @@
      
 <#macro showBirth statement>
 
+    <#-- 
     <#if statement.date?has_content>
-       ${statement.date}
-       <#if statement.place?has_content>
-           in ${statement.place}
-       </#if>
-    <#else>
-        ${statement.place}
+       <#local date = statement.date>
     </#if>
-         
+    <#if statement.place?has_content>
+       <#local place = statement.place>
+    </#if>
+    <@s.join [ date!, place! ] />
+    -->
+    
+    <#if statement.date?has_content>
+        ${statement.date}
+        <#-- If no place, we're not getting the date either -->
+        <#if statement.place?has_content>
+             in ${statement.place}
+        </#if>
+    <#-- Why does this cause an Unknown Directive error on #elsif ??   
+    <#elsif statement.place?has_content>
+        ${statement.place}
+    -->
+    </#if>
+    
 </#macro>
 
