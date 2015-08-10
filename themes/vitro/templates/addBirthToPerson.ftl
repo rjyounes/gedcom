@@ -36,7 +36,7 @@
 
 <#assign requiredHint = "<span class='requiredHint'> *</span>" />
 
-<h2>${titleVerb}&nbsp; birth of ${editConfiguration.subjectName}</h2>
+<h2>${titleVerb}&nbsp;birth of ${editConfiguration.subjectName}</h2>
 
 <#--Display error messages if any-->
 <#if submissionErrors?has_content>
