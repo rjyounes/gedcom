@@ -30,7 +30,7 @@
     <#if statement.spouse2name?has_content>
         <#local spouse2name = statement.spouse2name>
     </#if>
-    <@s.join [ spouse1name!, spouse2name! ], "&nbsp;and&nbsp;" />
+    <@s.join [ spouse1name!, spouse2name! ], "&nbsp;and " />
     
     <#if statement.date?has_content>
         on ${statement.date} 
