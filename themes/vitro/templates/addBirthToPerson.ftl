@@ -72,7 +72,7 @@
             <a class="cancel" href="${cancelUrl}" title="cancel">Cancel</a>
         </p>
 
-        <p id="requiredLegend" class="requiredHint">* required fields}</p>
+        <p id="requiredLegend" class="requiredHint">* required fields</p>
 
     </form>
 
