@@ -23,14 +23,11 @@
     
     <#if statement.date?has_content>
         ${statement.date}
-        <#-- If no place, we're not getting the date either -->
         <#if statement.place?has_content>
              in ${statement.place}
         </#if>
-    <#-- Why does this cause an Unknown Directive error on #elsif ??   
-    <#elsif statement.place?has_content>
+    <#elseif statement.place?has_content>
         ${statement.place}
-    -->
     </#if>
     
 </#macro>
