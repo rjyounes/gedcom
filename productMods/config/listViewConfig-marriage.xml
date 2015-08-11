@@ -17,12 +17,10 @@
             ?marriage a gedcom:Marriage .
             OPTIONAL { ?spouse1 gedcom:spouseIn ?subject ;
                                 gedcom:name ?spouse1name ;
-                                # gedcom:sex "F"^^xsd:string . }
                                 gedcom:sex ?sex1 .
                                 FILTER (STR(?sex1) = 'F') }
             OPTIONAL { ?spouse2 gedcom:spouseIn ?subject ;
                                 gedcom:name ?spouse2name ;
-                                # gedcom:sex "M"^^xsd:string . }
                                 gedcom:sex ?sex2 .                               
                                 FILTER (STR(?sex2) = 'M') }
             OPTIONAL { ?marriage gedcom:date ?date . }
