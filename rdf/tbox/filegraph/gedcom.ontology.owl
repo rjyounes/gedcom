@@ -75,6 +75,7 @@
     <owl:ObjectProperty rdf:about="&gedcom2;hasChild">
         <rdfs:domain rdf:resource="&gedcom;Family"/>
         <rdfs:range rdf:resource="&gedcom;Individual"/>
+        <owl:inverseOf rdf:resource="&gedcom;childIn"/>
     </owl:ObjectProperty>
     
 
@@ -84,6 +85,7 @@
     <owl:ObjectProperty rdf:about="&gedcom2;hasSpouse">
         <rdfs:domain rdf:resource="&gedcom;Family"/>
         <rdfs:range rdf:resource="&gedcom;Individual"/>
+        <owl:inverseOf rdf:resource="&gedcom;spouseIn"/>
     </owl:ObjectProperty>
     
 
@@ -143,6 +145,7 @@
     <owl:ObjectProperty rdf:about="&gedcom;childIn">
         <rdfs:range rdf:resource="&gedcom;Family"/>
         <rdfs:domain rdf:resource="&gedcom;Individual"/>
+        <owl:inverseOf rdf:resource="&gedcom2;hasChild" />
     </owl:ObjectProperty>
     
 
@@ -204,6 +207,7 @@
     <owl:ObjectProperty rdf:about="&gedcom;spouseIn">
         <rdfs:range rdf:resource="&gedcom;Family"/>
         <rdfs:domain rdf:resource="&gedcom;Individual"/>
+        <owl:inverseOf rdf:resource="&gedcom2;hasSpouse"/>
     </owl:ObjectProperty>
     
 
